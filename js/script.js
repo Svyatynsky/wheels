@@ -22,28 +22,18 @@ $(document).ready(function() {
 	});
 });
 
-// $(function(){
-// 	$('.fullscreen__body').slick({
-// 		fade: true,
-// 		prevArrow: $('.fullscreen__arrows_left'),
-// 		nextArrow: $('.fullscreen__arrows_right'),
-// 	});
-// });
-// $(window).resize(function() {
+$(document).ready(function() {
+	$('a.fullscreen__mouse').click(function() {
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top + 'px'
+		}, {
+			duration: 700,
+			easing: 'linear'
+		});
+		return false;
+	});
+});
 
-// 	if ( $(window).width() < 1160 ) {
-// 		$(function(){
-// 			$('.footer-top__title').click(function(event) {
-// 				if($('.block').hasClass('one')){
-// 					$('footer-top__title').not($(this)).removeClass('active');
-// 					$('.footer-top__subtitle').not($(this).next()).slideUp(300);
-
-// 				}
-// 				$(this).toggleClass('active').next().slideToggle(300);
-// 			});
-// 		});
-// 	}
-// });
 
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
